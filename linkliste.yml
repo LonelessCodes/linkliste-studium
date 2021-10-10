@@ -1,0 +1,82 @@
+version: 1
+
+title: Medieninformatik Sem III
+
+#
+# Links für ein Modul schreiben:
+# Alle Felder können weggelassen werden, wenn sie leer wären
+#
+# <Modul-Name>:
+#
+#   dozent: Liste mit folgenden Feldern
+#     - name: Prof. Mustermensch
+#       tel: <Telefonnummer>
+#       email: <Email>
+#       url: <Link irgendwo hin>
+#     - ...
+#
+#   isonline: Liste der Veranstaltungen, die online stattfinden
+#     - Vorlesungen
+#     - Übungen
+#     - ...
+#
+#   links: Key-Value der revelanten Links
+#     <Titel>: <Link>
+#     ... :    ...
+#
+#   notes: Liste der Anmerkungen
+#     - <Anmerkung>
+#
+
+module:
+  Computergrafik & Visualisierung I:
+    dozent:
+      - name: Prof. Wacker
+    isonline:
+      - Vorlesungen
+    links:
+      OPAL: https://bildungsportal.sachsen.de/opal/auth/RepositoryEntry/26206535682
+      Online-Vorlesungen BBB: https://ibbb.informatik.htw-dresden.de/b/mar-vq9-4zd-dlz
+
+  Datenbanksysteme II:
+    dozent:
+      - name: Prof. Dr. Axel Toll
+        tel: "+493514622104"
+    isonline:
+      - Vorlesungen
+    links:
+      OPAL: https://bildungsportal.sachsen.de/opal/auth/RepositoryEntry/18192105472/CourseNode/97310627243863
+      MS-Teams (Code 96kif1y): https://teams.microsoft.com/l/channel/19%3a9985134c7f2c492fa5594baab18bb6be%40thread.tacv2/Vorlesung%2520Prof.%2520Toll%2520WS%25202021_22?groupId=62696786-58cc-45b9-a500-3291a3e8220c&tenantId=502d2224-bc66-4ac3-bb51-78aeb9b05505
+
+  Rechnerarchitektur:
+    dozent:
+      - name: Prof. Jens Schönthier
+    links:
+      Unterlagen (nur über VPN): https://www.htw-dresden.de/~schoeni/intern/modul_ra.html
+
+  Rechnernetze & Kommunikationssysteme:
+    dozent:
+      - name: Prof. Sabine Kühn
+    isonline:
+      - Vorlesungen
+    links:
+      Unterlagen: https://www2.htw-dresden.de/~skuehn/
+  
+  Software Engineering I:
+    dozent:
+      - name: Prof. D. Müller
+    links:
+      Unterlagen und Aktuelles: https://www2.htw-dresden.de/~muellerd/SWEngI/
+
+  Programmierung III:
+    dozent:
+      - name: Dietrich Kammer
+      - name: Marco Block-Berlitz
+      - name: Jan Roeper 
+    isonline:
+      - Vorlesungen as Video
+    links:
+      OPAL: https://bildungsportal.sachsen.de/opal/auth/RepositoryEntry/32218382336/
+      Konsultationen während VL-Zeit BBB: https://ibbb.informatik.htw-dresden.de/b/mar-wh3-gga-86g
+    notes:
+      - Sollten Sie darüber hinaus Kommunikationsbedarf haben, melden Sie sich bitte via Mail bei mir oder Jan Roeper (roeper@informatik.htw-dresden.de)

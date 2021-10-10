@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html lang="de">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <title>Linkliste</title>
+
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+    <!-- App CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+
+  <body>
+    <div id="app" class="app-col">
+      <div class="container">
+
+        <!-- Title Header -->
+        <section class="section">
+          <h1 class="title">
+            Linkliste {{ config.title }}
+          </h1>
+          <h2 class="subtitle">
+            Eine Sammlung an Links, Emails und Anmerkungen für's Online-/Wechsel-Studium.
+          </h2>
+        </section>
+
+        <!-- Module -->
+        <section class="app-module" v-if="config.module && config.module.length > 0">
+          <div class="card block" v-for="modul of config.module" :key="modul.name">
+
+            <!-- Header mit Modul-Name -->
+            <div class="card-header app-modul-header">
+              <p class="card-header-title app-modul-title">{{ modul.name }}</p>
+              <div class="card-header-tags" v-if="modul.isonline && modul.isonline.length > 0">
+                <div class="tags">
+                  <span class="tag is-white">Ist online:</span>
+                  <span class="tag is-warning" v-for="veranstaltung of modul.isonline" :key="veranstaltung">{{ veranstaltung }}</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Content -->
+            <div class="card-content app-modul-content">
+
+              <div class="content app-modul-left">
+                <!-- Links -->
+                <template v-if="modul.links && Object.keys(modul.links).length > 0">
+                  <p>
+                    <template v-for="linkname of Object.keys(modul.links)" :key="linkname">
+
+                      <div class="icon-text app-modul-link" >
+                        <span class="icon has-text-info">
+                          <img class="image is-16x16" :src="getFavicon(modul.links[linkname])" />
+                        </span>
+
+                        <span>
+                          {{ linkname }}: 
+                          <a :href="modul.links[linkname]" target="_blank">
+                            {{ truncate(modul.links[linkname], 45) }}
+                          </a>
+                        </span>
+                      </div>
+
+                    </template>
+                  </p>
+                </template>
+
+                <!-- Anmerkungen -->
+                <template v-if="modul.notes && modul.notes.length > 0">
+                  <strong>Anmerkungen:</strong>
+                  <br>
+                  <ul>
+                    <li v-for="note of modul.notes" :key="note">{{ note }}</li>
+                  </ul>
+                </template>
+              </div>
+
+              <div class="app-modul-right">
+                <div class="media" v-for="(dozent, index) of modul.dozent" :key="index">
+                  <div class="media-content">
+                    <div class="content">
+                      <p>
+
+                        <template v-if="dozent.name">
+                          <a v-if="dozent.url" :href="dozent.url" target="_blank">
+                            <strong>{{ dozent.name }}</strong>
+                          </a>
+                          <a v-else :href="'https://www.htw-dresden.de/suche?tx_solr[q]=' + decodeURIComponent(dozent.name)" target="_blank">
+                            <strong>{{ dozent.name }}</strong>
+                          </a>
+                        </template>
+                        <template v-if="dozent.tel">
+                          <br>
+                          Tel.: <a :href="'tel:' + dozent.tel">{{ dozent.tel }}</a>
+                        </template>
+                        <template v-if="dozent.email">
+                          <br>
+                          Mail.: <a :href="'mail:' + dozent.email">{{ dozent.email }}</a>
+                        </template>
+
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <!-- Content End -->
+          </div>
+        </section>
+
+      </div>
+    </div>
+  
+    <noscript>
+      <section class="section">
+        <div class="container">
+          <div class="box">
+            <strong>Diese Website benötigt Javascript um zu funktionieren. Schalte es an um fortzufahren.</strong>
+          </div>
+        </div>
+      </section>
+
+      <style>
+        #app {
+          display: none;
+        }
+      </style>
+    </noscript>
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          Bearbeiten des Inhaltes auf <strong><a href="https://github.com/LonelessCodes" target="_blank">Github</a></strong>.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Vue JS v2 -->
+    <script src="https://unpkg.com/vue@2.6.14/dist/vue.min.js"></script>
+    <!-- js-yaml Javascript -->
+    <script src="https://unpkg.com/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+
+    <script src="scripts/main.js"></script>
+  </body>
+
+</html>
