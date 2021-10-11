@@ -68,6 +68,7 @@ module:
     dozent:
       - name: Prof. D. Müller
         email: muellerd@informatik.htw-dresden.de
+        url: https://www2.htw-dresden.de/~muellerd/
     links:
       Unterlagen und Aktuelles: https://www2.htw-dresden.de/~muellerd/SWEngI/
 
