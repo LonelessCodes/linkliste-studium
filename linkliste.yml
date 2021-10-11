@@ -54,7 +54,7 @@ module:
     links:
       Unterlagen (nur über VPN): https://www.htw-dresden.de/~schoeni/intern/modul_ra.html
     notes:
-      - Unterlagen ( Login: RA , Passwort: ra04x## )
+      - "Unterlagen ( Login: RA , Passwort: ra04x## )"
 
   Rechnernetze & Kommunikationssysteme:
     dozent:
