@@ -72,7 +72,7 @@ module:
     links:
       Unterlagen und Aktuelles: https://www2.htw-dresden.de/~muellerd/SWEngI/
     notes:
-      - Login ( Login: sestudent, Passwort: anakonda )
+      - "Login ( Login: sestudent, Passwort: anakonda )"
 
   Programmierung III:
     dozent:
