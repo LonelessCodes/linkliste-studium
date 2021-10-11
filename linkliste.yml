@@ -67,6 +67,7 @@ module:
   Software Engineering I:
     dozent:
       - name: Prof. D. Müller
+        email: muellerd@informatik.htw-dresden.de
     links:
       Unterlagen und Aktuelles: https://www2.htw-dresden.de/~muellerd/SWEngI/
 
