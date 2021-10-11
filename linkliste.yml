@@ -51,6 +51,8 @@ module:
   Rechnerarchitektur:
     dozent:
       - name: Prof. Jens Schönthier
+        email: jens.schoenthier@htw-dresden.de
+        tel: 462 2686
     links:
       Unterlagen (nur über VPN): https://www.htw-dresden.de/~schoeni/intern/modul_ra.html
     notes:
