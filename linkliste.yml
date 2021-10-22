@@ -37,6 +37,8 @@ module:
     links:
       OPAL: https://bildungsportal.sachsen.de/opal/auth/RepositoryEntry/26206535682
       Online-Vorlesungen BBB: https://ibbb.informatik.htw-dresden.de/b/mar-vq9-4zd-dlz
+    notes:
+      - "Unterlagen ( Password: blendshape )"
 
   Datenbanksysteme II:
     dozent:
