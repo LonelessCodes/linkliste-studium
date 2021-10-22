@@ -58,7 +58,7 @@ module:
     links:
       Unterlagen (nur über VPN): https://www.htw-dresden.de/~schoeni/intern/modul_ra.html
     notes:
-      - "Unterlagen ( Login: RA , Passwort: ra04x## )"
+      - "Unterlagen ( Login: RA , Passwort: ra04x## ). Auch PDF Passwort"
 
   Rechnernetze & Kommunikationssysteme:
     dozent:
@@ -67,6 +67,8 @@ module:
       - Vorlesungen
     links:
       Unterlagen: https://www2.htw-dresden.de/~skuehn/
+    notes:
+      - "Unterlagen ( Passwort: rnks0910 )"
   
   Software Engineering I:
     dozent:
